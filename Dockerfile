@@ -1,10 +1,12 @@
 FROM node:12
 
-COPY [".", "/usr/src/"]
+COPY ["package.json", "package-lock.json", "/code/"]
 
-WORKDIR /usr/src
+WORKDIR /code
 
 RUN npm install
+
+COPY [".", "/code/"]
 
 EXPOSE 3000
 
