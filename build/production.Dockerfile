@@ -1,3 +1,4 @@
+# Fase para correr los tests
 FROM node:12 as builder
 
 COPY ["package.json", "package-lock.json", "/usr/src/"]
